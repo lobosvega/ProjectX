@@ -1,0 +1,43 @@
+body{
+	margin: 0;
+	text-align: center;
+}
+
+.banner-home{
+	background-color: black;
+	color: white;
+	text-align: center;
+	background-position: center;
+	background-size: cover;
+	height: 500px;
+	padding-top: 300px;
+	font-size: 3em;
+}
+
+nav ul li a{
+	text-decoration: none;
+	color: black;
+	display: block;
+	background-color: white;
+	text-align: center;
+	padding-top: 10px;
+	padding: 10px 0 10px 0;
+}
+
+nav ul li a:hover{
+	background-color: black;
+	color: white;	
+}
+
+nav ul{
+	list-style: none;
+	padding-left: 0;
+}
+main{
+	background-image: url("../images/1d30f777781a8997b8269d212a93fb03a47675b8.jpg");	
+}
+.candidatePhoto{
+	border-radius: 90%;
+}
+
+	
