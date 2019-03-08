@@ -331,33 +331,32 @@
     </div>
   </section>
   <!-- end of  past presidents -->
-  
-  <!-- contact -->
-  <section class="contact p-5">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-5 pb-4">
-          <h3 class="display-4 mb-5 text-white">Get In Touch</h3>
-          <form class="contact-form">
-            <div class="form-group py-4">
-              <input type="text" class="form-control my-2 p-2 input" placeholder="Name">
-              <label for="name" class="label">Name</label>
-            </div>
-            <div class="form-group py-4">
-              <input type="email" class="form-control my-2 p-2 input" placeholder="Email Address">
-              <label for="email" class="label">Email Address</label>
-            </div>
-            <div class="form-group py-4 my-4">
-              <input type="checkbox" checked="">
-              <label for="check" class="text-white">Send Announcemets</label>
-            </div>
-            <button type="submit" class="btn btn-block p-2 font-weight-bold text-uppercase submit-button">Subscribe</button>
-          </form>
+
+  <!-- polling location -->
+  <section class="poll p-5">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-5 pb-4">
+            <h3 class="display-4 mb-5 text-white">Find your Polling Location</h3>
+            <form class="contact-form">
+              <div class="form-group py-4">
+                <label for="address-input" class="label"></label>
+                <input type="text" class="form-control my-2 p-2 input" id= "house-input" placeholder="House Number">
+                <input type="text" class="form-control my-2 p-2 input" id= "street-input" placeholder="Street">
+                <input type="text" class="form-control my-2 p-2 input" id= "city-input" placeholder="City">
+                <input type="text" class="form-control my-2 p-2 input" id= "state-input" placeholder="State">
+                <input type="text" class="form-control my-2 p-2 input" id= "zipCode-input" placeholder="Zip Code">
+              </div>
+              <button type="button" id="add-address" class="btn btn-block p-2 font-weight-bold text-uppercase submit-button" value= "Submit">Find My Location!</button>
+            </form>
         </div>
-      </div>
+      <div class="col-lg-7" id= "map"></div>
     </div>
-  </section>
-  <!-- end of contact -->
+      </div>
+    </section>
+  
+  <!-- End of polling location -->
+
 
   <!-- Team -->
   <section class="p-5 team">
@@ -588,7 +587,12 @@
     </div>
   </footer>
   <!-- end of footer -->
-
+  <script
+  async
+  defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNF6uPsCtt2kAj3M9Pt7jskCOhMT_KZ0U&callback=window.initMap"
+  ></script>
+  
   <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
@@ -628,9 +632,9 @@
 	else {
 		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
 	}
-	// ]]>
+  // ]]>
+  
 </script>
-
 
 
 
