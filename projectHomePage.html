@@ -332,13 +332,13 @@
       <div class="row">
         <div class="col-lg-5 pb-4">
           <h3 class="display-4 mb-5 text-white">Get In Touch</h3>
-          <form class="contact-form">
+          <form id="subscription-form" class="contact-form">
             <div class="form-group py-4">
-              <input type="text" class="form-control my-2 p-2 input" placeholder="Name">
+              <input id="subscriber-name" type="text" class="form-control my-2 p-2 input" placeholder="Name" required>
               <label for="name" class="label">Name</label>
             </div>
             <div class="form-group py-4">
-              <input type="email" class="form-control my-2 p-2 input" placeholder="Email Address">
+              <input id="subscriber-email" type="email" class="form-control my-2 p-2 input" placeholder="Email Address" required>
               <label for="email" class="label">Email Address</label>
             </div>
             <div class="form-group py-4 my-4">
@@ -624,52 +624,55 @@
 	}
 	// ]]>
 </script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.6/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBafIoZHCp0Ix26lWEEP_DGIYAjwnp8Smc",
+    authDomain: "uvote-dev.firebaseapp.com",
+    databaseURL: "https://uvote-dev.firebaseio.com",
+    projectId: "uvote-dev",
+    storageBucket: "uvote-dev.appspot.com",
+    messagingSenderId: "289957336857"
+  };
+  firebase.initializeApp(config);
+  var db = firebase.database();
 
+  function createSubscriber(name, email) {
+    firebase.database().ref('subscribers/').push({
+      name: name,
+      email: email
+    });
+  }
 
+  // createSubscriber("Dominique", "d@gmail.com");
 
+  var subscriptionForm = document.getElementById("subscription-form");
+  console.log(subscriptionForm)
 
+  subscriptionForm.addEventListener('submit', function(event) {
+    // prevent default behavior (i.e. don't reload pg on form submission)
+    event.preventDefault();
 
+    // get name from input 
+    var name = document.getElementById("subscriber-name").value;
+    console.log(name);
 
+    // get email from the input
+    var email = document.getElementById("subscriber-email").value;
+    console.log(email);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body></html>
+    // create a subscriber (e.g. send user data to firebase)
+    createSubscriber(name, email);
+    
+    // display alert
+    Swal.fire(
+      'Thanks for subscribing!',
+      'Look out for sweet emails about your candidates',
+      'success'
+    );
+  });
+</script>
+</body>
+</html>
