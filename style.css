@@ -375,3 +375,27 @@ header {
   text-decoration: none;
 }
 /* end of footer */
+
+/* NYTimes CSS  */
+.newsCard {
+  padding: 15px;
+  position: relative;
+  border: 1px solid;
+  margin: 5px 5px 5px 5px;
+  border-radius: 10px;
+}
+
+.btn {
+  padding: 5px;
+  align-items: flex-end;
+  margin: 5px;
+  background-color: black;
+  color: white;
+}
+
+.blah {
+  display: flex;
+  position: absolute;
+  bottom: 2px;
+  right: 140px;
+}

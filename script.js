@@ -200,3 +200,74 @@ $(document).ready(function() {
     });
   });
 });
+
+var candidateArray = [
+  "Cory Booker",
+  "Pete Buttigieg",
+  "Julian Castro",
+  "John Delaney",
+  "Tulsi Gabbard",
+  "Kirsten Gillibrand",
+  "Kamala Harris",
+  "John Hickenlooper",
+  "Jay Inslee",
+  "Amy Klobuchar",
+  "Bernie Sanders",
+  "Donald Trump",
+  "Elizabeth Warren",
+  "William Weld",
+  "Marianne Williamson",
+  "Andrew Yang"
+];
+
+$(document).ready(function() {
+  cards = "";
+  function displayButtons() {
+    $("buttons").empty();
+    for (var i = 0; i < candidateArray.length; i++) {
+      var newBtn = $("<button>");
+      newBtn.addClass("btn");
+      newBtn.attr("data-name", candidateArray[i]);
+      newBtn.text(candidateArray[i]);
+      $("#buttons").append(newBtn);
+    }
+  }
+
+  displayButtons();
+
+  $(document).on("click", "button", function() {
+    $("#cards").empty();
+    var y = $(this).attr("data-name");
+    var queryURL =
+      "http://api.nytimes.com/svc/search/v2/articlesearch.json?q=" +
+      y +
+      "&api-key=O9O42AUS15WtWuJXO33I79AgyT0nDPFq";
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(data) {
+      var articles = data.response.docs;
+
+      for (var i = 0; i < articles.length; i++) {
+        var articlesDiv = $("<div>");
+        var articlesBody = $("<div class=newsCard>");
+        var articlesHeadline = $("<h3>").text(articles[i].headline.main);
+        var articlesSnippet = $("<p>").text(articles[i].snippet);
+        var buttonDiv = $("<div>");
+        buttonDiv.addClass("new");
+        var more = $("<a>").text("More");
+        more.attr("href", articles[i].web_url);
+        more.attr("target", "_blank");
+        more.addClass("btn btn-primary");
+        articlesDiv.addClass("row");
+        articlesDiv.addClass("col-md-4");
+        articlesBody.append(articlesHeadline);
+        articlesBody.append(articlesSnippet);
+        articlesBody.append(buttonDiv);
+        articlesDiv.append(articlesBody);
+        buttonDiv.append(more);
+        $("#cards").append(articlesDiv);
+      }
+    });
+  });
+});
