@@ -199,28 +199,27 @@ $(document).ready(function() {
       });
     });
   });
-});
 
-var candidateArray = [
-  "Cory Booker",
-  "Pete Buttigieg",
-  "Julian Castro",
-  "John Delaney",
-  "Tulsi Gabbard",
-  "Kirsten Gillibrand",
-  "Kamala Harris",
-  "John Hickenlooper",
-  "Jay Inslee",
-  "Amy Klobuchar",
-  "Bernie Sanders",
-  "Donald Trump",
-  "Elizabeth Warren",
-  "William Weld",
-  "Marianne Williamson",
-  "Andrew Yang"
-];
+  var candidateArray = [
+    "Cory Booker",
+    "Pete Buttigieg",
+    "Julian Castro",
+    "John Delaney",
+    "Tulsi Gabbard",
+    "Kirsten Gillibrand",
+    "Kamala Harris",
+    "John Hickenlooper",
+    "Jay Inslee",
+    "Amy Klobuchar",
+    "Bernie Sanders",
+    "Donald Trump",
+    "Elizabeth Warren",
+    "William Weld",
+    "Marianne Williamson",
+    "Andrew Yang"
+  ];
 
-$(document).ready(function() {
+  // $(document).ready(function() {
   cards = "";
   function displayButtons() {
     $("buttons").empty();
