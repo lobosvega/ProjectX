@@ -1,264 +1,671 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale-1">
-	<title>Uvote</title>
-	<!-- shortcut icon-is for the little Browser icon -->
-	<link rel="shortcut icon" href="img/vote-logo.jpg"> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/arrow.css">
-	<link rel="stylesheet" href="css/fixed.css">
-	<link rel="stylesheet" href="css/lightbox.css">
-	<link rel="stylesheet" href="css/owl.carousel.css">
-	<link rel="stylesheet" href="css/owl.theme.default.css">
-	<link rel="stylesheet" href="css/waypoints.css">
+    <title>Vote</title>
+<html lang="en" class="fontawesome-i2svg-active fontawesome-i2svg-complete"><head>
+<style type="text/css">svg:not(:root).svg-inline--fa{overflow:visible}.svg-inline--fa{display:inline-block;font-size:inherit;height:1em;overflow:visible;vertical-align:-.125em}.svg-inline--fa.fa-lg{vertical-align:-.225em}.svg-inline--fa.fa-w-1{width:.0625em}.svg-inline--fa.fa-w-2{width:.125em}.svg-inline--fa.fa-w-3{width:.1875em}.svg-inline--fa.fa-w-4{width:.25em}.svg-inline--fa.fa-w-5{width:.3125em}.svg-inline--fa.fa-w-6{width:.375em}.svg-inline--fa.fa-w-7{width:.4375em}.svg-inline--fa.fa-w-8{width:.5em}.svg-inline--fa.fa-w-9{width:.5625em}.svg-inline--fa.fa-w-10{width:.625em}.svg-inline--fa.fa-w-11{width:.6875em}.svg-inline--fa.fa-w-12{width:.75em}.svg-inline--fa.fa-w-13{width:.8125em}.svg-inline--fa.fa-w-14{width:.875em}.svg-inline--fa.fa-w-15{width:.9375em}.svg-inline--fa.fa-w-16{width:1em}.svg-inline--fa.fa-w-17{width:1.0625em}.svg-inline--fa.fa-w-18{width:1.125em}.svg-inline--fa.fa-w-19{width:1.1875em}.svg-inline--fa.fa-w-20{width:1.25em}.svg-inline--fa.fa-pull-left{margin-right:.3em;width:auto}.svg-inline--fa.fa-pull-right{margin-left:.3em;width:auto}.svg-inline--fa.fa-border{height:1.5em}.svg-inline--fa.fa-li{width:2em}.svg-inline--fa.fa-fw{width:1.25em}.fa-layers svg.svg-inline--fa{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.fa-layers{display:inline-block;height:1em;position:relative;text-align:center;vertical-align:-.125em;width:1em}.fa-layers svg.svg-inline--fa{-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter,.fa-layers-text{display:inline-block;position:absolute;text-align:center}.fa-layers-text{left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter{background-color:#ff253a;border-radius:1em;-webkit-box-sizing:border-box;box-sizing:border-box;color:#fff;height:1.5em;line-height:1;max-width:5em;min-width:1.5em;overflow:hidden;padding:.25em;right:0;text-overflow:ellipsis;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-bottom-right{bottom:0;right:0;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom right;transform-origin:bottom right}.fa-layers-bottom-left{bottom:0;left:0;right:auto;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom left;transform-origin:bottom left}.fa-layers-top-right{right:0;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-top-left{left:0;right:auto;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top left;transform-origin:top left}.fa-lg{font-size:1.33333em;line-height:.75em;vertical-align:-.0667em}.fa-xs{font-size:.75em}.fa-sm{font-size:.875em}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:2.5em;padding-left:0}.fa-ul>li{position:relative}.fa-li{left:-2em;position:absolute;text-align:center;width:2em;line-height:inherit}.fa-border{border:solid .08em #eee;border-radius:.1em;padding:.2em .25em .15em}.fa-pull-left{float:left}.fa-pull-right{float:right}.fa.fa-pull-left,.fab.fa-pull-left,.fal.fa-pull-left,.far.fa-pull-left,.fas.fa-pull-left{margin-right:.3em}.fa.fa-pull-right,.fab.fa-pull-right,.fal.fa-pull-right,.far.fa-pull-right,.fas.fa-pull-right{margin-left:.3em}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.fa-rotate-90{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-webkit-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-webkit-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{-webkit-transform:scale(1,-1);transform:scale(1,-1)}.fa-flip-horizontal.fa-flip-vertical{-webkit-transform:scale(-1,-1);transform:scale(-1,-1)}:root .fa-flip-horizontal,:root .fa-flip-vertical,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-rotate-90{-webkit-filter:none;filter:none}.fa-stack{display:inline-block;height:2em;position:relative;width:2em}.fa-stack-1x,.fa-stack-2x{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.svg-inline--fa.fa-stack-1x{height:1em;width:1em}.svg-inline--fa.fa-stack-2x{height:2em;width:2em}.fa-inverse{color:#fff}.sr-only{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.sr-only-focusable:active,.sr-only-focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}</style><link rel="icon" href="images/icon.jpg">
+<script defer="" src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
 </head>
-<body data-spy="scroll" data-target="#navbarResponsive">
 
-<!--- Start Home Section -->
-<div id="home">
+<body data-spy="data-target=#navbarResponsive">
+  <!-- Start of Header -->
+  <header>
+    <!-- Start of Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top nav-menu custom-navbar">
+      <button class="navbar-toggler nav-button" type="button" data-toggle="collapse" data-target="#myNavbar">
+        <div class="bg-light line1"></div>
+        <div class="bg-light line2"></div>
+        <div class="bg-light line3"></div>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end text-uppercase font-weight-bold" id="myNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="#" class="nav-link m-2 menu-item nav-active">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#mission" class="nav-link m-2 menu-item">Mission</a>
+          </li>
+          <li class="nav-item">
+            <a href="#running" class="nav-link m-2 menu-item">Candidates</a>
+          </li>
+          <li class="nav-item">
+            <a href="#past" class="nav-link m-2 menu-item">Registration</a>
+          </li>
+          <li class="nav-item">
+            <a href="#locator" class="nav-link m-2 menu-item">Booth locator</a>
+          </li>
+          <li class="nav-item">
+            <a href="#team" class="nav-link m-2 menu-item">Team</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Ending of navbar -->
 
-<!--- Navigation -->
-<nav class="navbar navbar-expand-lg fixed-top">
-<div class="container-fluid">
-	<a class="navbar-brand" href="#"><img src="img/vote.jpg"></a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
-		<span class="custom-toggler-icon"><i class="fas fa-bars"></i></span>
-	</button>
 
-	<div class="collapse navbar-collapse" id="navbarResponsive">
-		<ul class="navbar-nav ml-auto">
-			<li class="nav-item">
-				<a class="nav-link" href="#home">Home</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#features">Features</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#running">Running</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#location">Location</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#contact">Contact</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="#team">Team</a>
-			</li>
-		</ul>
+    <!-- Starting of the Banner -->
+    <!-- using (text-center) to help place the text into the center on a small screen -->
+    <div class="text-light text-md-right text-center banner">
+      <h1 class="display-4 banner-heading">Welcome to <span class="text-uppercase">U</span><span class="display-3">VOTE</span></h1>
+      <p class="lead banner-paragraph">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+
+    <!-- Begin 270towin.com 2020 Presidential Election Countdown Widget -->
+    <div class="clock">
+<iframe src="http://www.270towin.com/2020-countdown-clock/widget300x200.php" width="300" height="200" border="0" frameborder="0">
+  Browser not supported. Visit <a href="http://www.270towin.com/">www.270towin.com</a>
+</iframe>
+</div>
+<!-- End 270towin.com 2020 Presidential Election Countdown widget --> 
+    </div>
+    <!-- Ending of the  banner -->
+  </header>
+  <!-- Ending of the  header -->
+
+
+  <!-- Starting of mission -->
+  <section class="p-5 mission" id="mission">
+    <div class="container-fluid">
+      <!-- title -->
+      <div class="row text-white text-center">
+        <div class="col m-4">
+          <h1 class="display-4 mb-4">Our Mission</h1>
+          <div class="underline mb-4"></div>
+          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium inventore, sint quisquam fugiat pariatur culpa officia. Eveniet omnis quia tempora.</p>
+        </div>
+      </div>
+      <!-- end of title -->
+      <!-- my-5 for space on top & bottom  -->
+      <div class="row my-5">
+        <!-- each column only take up one third of the entire row (md-4) -->
+        <div class="col-md-4 text-center">
+          <!-- 5x changes size of fontawesome icon -->
+          <svg class="svg-inline--fa fa-cogs fa-w-20 fa-5x text-danger mb-4" aria-hidden="true" data-prefix="fas" data-icon="cogs" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M512.1 191l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0L552 6.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zm-10.5-58.8c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.7-82.4 14.3-52.8 52.8zM386.3 286.1l33.7 16.8c10.1 5.8 14.5 18.1 10.5 29.1-8.9 24.2-26.4 46.4-42.6 65.8-7.4 8.9-20.2 11.1-30.3 5.3l-29.1-16.8c-16 13.7-34.6 24.6-54.9 31.7v33.6c0 11.6-8.3 21.6-19.7 23.6-24.6 4.2-50.4 4.4-75.9 0-11.5-2-20-11.9-20-23.6V418c-20.3-7.2-38.9-18-54.9-31.7L74 403c-10 5.8-22.9 3.6-30.3-5.3-16.2-19.4-33.3-41.6-42.2-65.7-4-10.9.4-23.2 10.5-29.1l33.3-16.8c-3.9-20.9-3.9-42.4 0-63.4L12 205.8c-10.1-5.8-14.6-18.1-10.5-29 8.9-24.2 26-46.4 42.2-65.8 7.4-8.9 20.2-11.1 30.3-5.3l29.1 16.8c16-13.7 34.6-24.6 54.9-31.7V57.1c0-11.5 8.2-21.5 19.6-23.5 24.6-4.2 50.5-4.4 76-.1 11.5 2 20 11.9 20 23.6v33.6c20.3 7.2 38.9 18 54.9 31.7l29.1-16.8c10-5.8 22.9-3.6 30.3 5.3 16.2 19.4 33.2 41.6 42.1 65.8 4 10.9.1 23.2-10 29.1l-33.7 16.8c3.9 21 3.9 42.5 0 63.5zm-117.6 21.1c59.2-77-28.7-164.9-105.7-105.7-59.2 77 28.7 164.9 105.7 105.7zm243.4 182.7l-8.2 14.3c-3 5.3-9.4 7.5-15.1 5.4-11.8-4.4-22.6-10.7-32.1-18.6-4.6-3.8-5.8-10.5-2.8-15.7l8.2-14.3c-6.9-8-12.3-17.3-15.9-27.4h-16.5c-6 0-11.2-4.3-12.2-10.3-2-12-2.1-24.6 0-37.1 1-6 6.2-10.4 12.2-10.4h16.5c3.6-10.1 9-19.4 15.9-27.4l-8.2-14.3c-3-5.2-1.9-11.9 2.8-15.7 9.5-7.9 20.4-14.2 32.1-18.6 5.7-2.1 12.1.1 15.1 5.4l8.2 14.3c10.5-1.9 21.2-1.9 31.7 0l8.2-14.3c3-5.3 9.4-7.5 15.1-5.4 11.8 4.4 22.6 10.7 32.1 18.6 4.6 3.8 5.8 10.5 2.8 15.7l-8.2 14.3c6.9 8 12.3 17.3 15.9 27.4h16.5c6 0 11.2 4.3 12.2 10.3 2 12 2.1 24.6 0 37.1-1 6-6.2 10.4-12.2 10.4h-16.5c-3.6 10.1-9 19.4-15.9 27.4l8.2 14.3c3 5.2 1.9 11.9-2.8 15.7-9.5 7.9-20.4 14.2-32.1 18.6-5.7 2.1-12.1-.1-15.1-5.4l-8.2-14.3c-10.4 1.9-21.2 1.9-31.7 0zM501.6 431c38.5 29.6 82.4-14.3 52.8-52.8-38.5-29.6-82.4 14.3-52.8 52.8z"></path></svg><!-- <i class="fas fa-cogs fa-5x text-danger mb-4"></i> -->
+          <h1 class="text-white mb-3">Creativity</h1>
+          <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic perferendis dolor vitae sed, quae officiis exercitationem quaerat? Fugit excepturi exercitationem inventore, repellendus architecto illum!</p>
+        </div>
+        <div class="col-md-4 text-center">
+            <svg class="svg-inline--fa fa-thumbs-up fa-w-16 fa-5x text-danger mb-4" aria-hidden="true" data-prefix="far" data-icon="thumbs-up" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M466.27 286.69C475.04 271.84 480 256 480 236.85c0-44.015-37.218-85.58-85.82-85.58H357.7c4.92-12.81 8.85-28.13 8.85-46.54C366.55 31.936 328.86 0 271.28 0c-61.607 0-58.093 94.933-71.76 108.6-22.747 22.747-49.615 66.447-68.76 83.4H32c-17.673 0-32 14.327-32 32v240c0 17.673 14.327 32 32 32h64c14.893 0 27.408-10.174 30.978-23.95 44.509 1.001 75.06 39.94 177.802 39.94 7.22 0 15.22.01 22.22.01 77.117 0 111.986-39.423 112.94-95.33 13.319-18.425 20.299-43.122 17.34-66.99 9.854-18.452 13.664-40.343 8.99-62.99zm-61.75 53.83c12.56 21.13 1.26 49.41-13.94 57.57 7.7 48.78-17.608 65.9-53.12 65.9h-37.82c-71.639 0-118.029-37.82-171.64-37.82V240h10.92c28.36 0 67.98-70.89 94.54-97.46 28.36-28.36 18.91-75.63 37.82-94.54 47.27 0 47.27 32.98 47.27 56.73 0 39.17-28.36 56.72-28.36 94.54h103.99c21.11 0 37.73 18.91 37.82 37.82.09 18.9-12.82 37.81-22.27 37.81 13.489 14.555 16.371 45.236-5.21 65.62zM88 432c0 13.255-10.745 24-24 24s-24-10.745-24-24 10.745-24 24-24 24 10.745 24 24z"></path></svg><!-- <i class="far fa-thumbs-up fa-5x text-danger mb-4"></i> -->
+            <h1 class="text-white mb-3">Quality</h1>
+            <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic perferendis dolor vitae sed, quae officiis exercitationem quaerat? Fugit excepturi exercitationem inventore, repellendus architecto illum!</p>
+        </div>
+        <div class="col-md-4 text-center">
+            <svg class="svg-inline--fa fa-handshake fa-w-20 fa-5x text-danger mb-4" aria-hidden="true" data-prefix="far" data-icon="handshake" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M519.2 127.9l-47.6-47.6A56.252 56.252 0 0 0 432 64H205.2c-14.8 0-29.1 5.9-39.6 16.3L118 127.9H0v255.7h64c17.6 0 31.8-14.2 31.9-31.7h9.1l84.6 76.4c30.9 25.1 73.8 25.7 105.6 3.8 12.5 10.8 26 15.9 41.1 15.9 18.2 0 35.3-7.4 48.8-24 22.1 8.7 48.2 2.6 64-16.8l26.2-32.3c5.6-6.9 9.1-14.8 10.9-23h57.9c.1 17.5 14.4 31.7 31.9 31.7h64V127.9H519.2zM48 351.6c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16zm390-6.9l-26.1 32.2c-2.8 3.4-7.8 4-11.3 1.2l-23.9-19.4-30 36.5c-6 7.3-15 4.8-18 2.4l-36.8-31.5-15.6 19.2c-13.9 17.1-39.2 19.7-55.3 6.6l-97.3-88H96V175.8h41.9l61.7-61.6c2-.8 3.7-1.5 5.7-2.3H262l-38.7 35.5c-29.4 26.9-31.1 72.3-4.4 101.3 14.8 16.2 61.2 41.2 101.5 4.4l8.2-7.5 108.2 87.8c3.4 2.8 3.9 7.9 1.2 11.3zm106-40.8h-69.2c-2.3-2.8-4.9-5.4-7.7-7.7l-102.7-83.4 12.5-11.4c6.5-6 7-16.1 1-22.6L367 167.1c-6-6.5-16.1-6.9-22.6-1l-55.2 50.6c-9.5 8.7-25.7 9.4-34.6 0-9.3-9.9-8.5-25.1 1.2-33.9l65.6-60.1c7.4-6.8 17-10.5 27-10.5l83.7-.2c2.1 0 4.1.8 5.5 2.3l61.7 61.6H544v128zm48 47.7c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16c0 8.9-7.2 16-16 16z"></path></svg><!-- <i class="far fa-handshake fa-5x text-danger mb-4"></i> -->
+            <h1 class="text-white mb-3">Experience</h1>
+            <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea hic perferendis dolor vitae sed, quae officiis exercitationem quaerat? Fugit excepturi exercitationem inventore, repellendus architecto illum!</p>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 text-center">
+          <img src="images/Vote.jpg" width="350" class="img-fluid camera-img">
+        </div>
+        <!-- (text-lg-right) on large screen text will place on the right and small screen center -->
+        <div class="col-lg-7 text-white text-lg-right text-center mission-text">
+          <h1>We know what we do</h1>
+          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet tempora itaque obcaecati voluptas? Perferendis voluptate accusantium eum sit deleniti harum, assumenda vitae! Cupiditate eos iusto ab rerum, voluptatum minima sed?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Ending of the mission -->
+
+  
+  <!-- Running -->
+  <section class="bg-secondary py-4" id="running">
+    <div class="container-fluid">
+      <!-- title -->
+      <div class="row text-white text-center">
+        <div class="col m-4">
+          <h1 class="display-4 mb-4">Who is Running ?</h1>
+          <div class="underline mb-4"></div>
+          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium inventore, sint quisquam fugiat pariatur culpa officia. Eveniet omnis quia tempora.</p>
+        </div>
+      </div>
+      <!-- end of title -->
+      <div class="row">
+        <div class="col-lg-3 col-sm-6 my-3">
+          <div class="card border-0 card-shadow">
+            <img src="images/Running/Booker.jpg" width="200" height="375" class="card-img">
+            <div class="card-img-overlay">
+              <h5 class="text-white text-uppercase font-weight-bold p-2 heading">Cory Booker</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 my-3">
+          <div class="card border-0 card-shadow">
+            <img src="images/Running/Buttigieg.jpg" width="200" height="375" class="card-img">
+            <div class="card-img-overlay">
+              <h5 class="text-white text-uppercase font-weight-bold p-2 heading">Pete Buttigieg</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 my-3">
+          <div class="card border-0 card-shadow">
+            <img src="images/Running/Castro.jpg" width="200" height="375" class="card-img">
+            <div class="card-img-overlay">
+              <h5 class="text-white text-uppercase font-weight-bold p-2 heading">Julián Castro</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 my-3">
+          <div class="card border-0 card-shadow">
+            <img src="images/Running/Delaney.jpg" width="200" height="375" class="card-img">
+            <div class="card-img-overlay">
+              <h5 class="text-white text-uppercase font-weight-bold p-2 heading">John Delaney</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 my-3">
+          <div class="card border-0 card-shadow">
+            <img src="images/Running/Gabbard.jpg" width="200" height="375" class="card-img">
+            <div class="card-img-overlay">
+              <h5 class="text-white text-uppercase font-weight-bold p-2 heading">Tulsi Gabbard</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 my-3">
+          <div class="card border-0 card-shadow">
+            <img src="images/Running/Gillibrand.jpg" width="200" height="375" class="card-img">
+            <div class="card-img-overlay">
+              <h5 class="text-white text-uppercase font-weight-bold p-2 heading">Kirsten Gillibrand</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 my-3">
+          <div class="card border-0 card-shadow">
+            <img src="images/Running/Harris.jpg" width="200" height="375" class="card-img">
+            <div class="card-img-overlay">
+              <h5 class="text-white text-uppercase font-weight-bold p-2 heading">Kamala Harris,</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 my-3">
+          <div class="card border-0 card-shadow">
+            <img src="images/Running/Hickenlooper.jpg" width="200" height="375" class="card-img">
+            <div class="card-img-overlay">
+              <h5 class="text-white text-uppercase font-weight-bold p-2 heading">John Hickenlooper</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 my-3">
+          <div class="card border-0 card-shadow">
+            <img src="images/Running/Inslee.jpg" width="200" height="375" class="card-img">
+            <div class="card-img-overlay">
+              <h5 class="text-white text-uppercase font-weight-bold p-2 heading">Jay Inslee</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 my-3">
+          <div class="card border-0 card-shadow">
+            <img src="images/Running/Klobuchar.jpg" width="200" height="375" class="card-img">
+            <div class="card-img-overlay">
+              <h5 class="text-white text-uppercase font-weight-bold p-2 heading">/Amy Klobuchar</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 my-3">
+          <div class="card border-0 card-shadow">
+            <img src="images/Running/Sander.jpg" width="200" height="375" class="card-img">
+            <div class="card-img-overlay">
+              <h5 class="text-white text-uppercase font-weight-bold p-2 heading">Bernie Sanders</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 my-3">
+          <div class="card border-0 card-shadow">
+            <img src="images/Running/Trump.jpg" width="200" height="375" class="card-img">
+            <div class="card-img-overlay">
+              <h5 class="text-white text-uppercase font-weight-bold p-2 heading">Donald J. Trump</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 my-3">
+          <div class="card border-0 card-shadow">
+            <img src="images/Running/Warren.jpg" width="200" height="375" class="card-img">
+            <div class="card-img-overlay">
+              <h5 class="text-white text-uppercase font-weight-bold p-2 heading">Elizabeth Warren</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 my-3">
+          <div class="card border-0 card-shadow">
+            <img src="images/Running/Weld.jpg" width="200" height="375" class="card-img">
+            <div class="card-img-overlay">
+              <h5 class="text-white text-uppercase font-weight-bold p-2 heading">William F. Weld</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 my-3">
+          <div class="card border-0 card-shadow">
+            <img src="images/Running/Williamson.jpg" width="200" height="375" class="card-img">
+            <div class="card-img-overlay">
+              <h5 class="text-white text-uppercase font-weight-bold p-2 heading">Marianne Williamson</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 my-3">
+          <div class="card border-0 card-shadow">
+            <img src="images/Running/Yang.jpg" width="200" height="375" class="card-img">
+            <div class="card-img-overlay">
+              <h5 class="text-white text-uppercase font-weight-bold p-2 heading">Andrew Yang</h5>
+            </div>
+          </div>
+        </div>
+      </div>
 	</div>
-</div>
-</nav>
-<!--- End Navigation -->
+	
+	<div class="container">
+		<div class="row" id="buttons"></div>
+		<br />
+		<br />
+		<div class="row" id="cards"></div>
+	  </div>
+  </section>
+  <!-- end of Running -->
 
-<!--- Start Landing Page Image -->
-<div class="landing">
-	<div class="home-wrap">
-		<div class="home-inner">
-		</div>
-	</div>
-</div>
-<!--- End Landing Page Image -->
+  
+  
 
-<!--- Start Landing Page Caption -->
-<div class="caption center-block text-center">
+  <!--  register -->
+  <section class="bg-light text-center p-5" id="past">
+    <div class="container-fluid">
+      <!-- title -->
+      <div class="row text-muted text-center">
+        <div class="col m-4">
+          <h1 class="display-4 mb-4">Join Us</h1>
+          <div class="underline-dark mb-4"></div>
+          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium inventore, sint quisquam fugiat pariatur culpa officia. Eveniet omnis quia tempora.</p>
+        </div>
+      </div>
+      <!-- end of title -->
+      <div class="row align-items-center">
+        <div class="col-lg-4">
+          <div class="card card-1 text-light py-4 my-4 mx-auto">
+            <div class="card-body">
+              <iframe src="https://verify.vote.org/?partner=111111&campaign=free-tools" width="100%" marginheight="0" frameborder="0" id="frame3" scrollable="no"></iframe><script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.3/iframeResizer.min.js" ></script><script type="text/javascript">iFrameResize({ log:true, checkOrigin:false});</script>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card card-2 text-light py-4 my-4 mx-auto">
+            <div class="card-body">
+              <iframe src="https://register.vote.org/?partner=111111&campaign=free-tools" width="100%" marginheight="0" frameborder="0" id="frame1" scrollable ="no"></iframe><script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.3/iframeResizer.min.js"></script><script type="text/javascript">iFrameResize({ log:true, checkOrigin:false});</script>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card card-3 text-light py-4 my-4 mx-auto">
+            <div class="card-body">
+              <iframe src="https://absentee.vote.org/?partner=111111&campaign=free-tools" width="100%" marginheight="0" frameborder="0" id="frame2" scrollable="no"></iframe><script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.3/iframeResizer.min.js"></script><script type="text/javascript">iFrameResize({ log:true, checkOrigin:false});</script>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="my-5">
+          <iframe src="https://reminders.vote.org/?partner=111111&campaign=free-tools" width="100%" marginheight="300" frameborder="0" id="frame4" scrollable ="no"></iframe><script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.3/iframeResizer.min.js"></script><script type="text/javascript">iFrameResize({ log:true, checkOrigin:false});</script>
+      </div>
+    </div>
+  </section>
+  <!-- end of  past presidents -->
 
-	<div class="os-animation" data-animation="bounceInLeft" data-delay=".6s">
-		<h1>Welcome To Vote Club</h1>
-	</div>
+  <!-- polling location -->
+  <section class="poll p-5" id="locator">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-5 pb-4">
+            <h3 class="display-4 mb-5 text-white">Find your Polling Location</h3>
+            <form class="contact-form">
+              <div class="form-group py-4">
+                <label for="address-input" class="label"></label>
+                <input type="text" class="form-control my-2 p-2 input" id= "house-input" placeholder="House Number">
+                <input type="text" class="form-control my-2 p-2 input" id= "street-input" placeholder="Street">
+                <input type="text" class="form-control my-2 p-2 input" id= "city-input" placeholder="City">
+                <input type="text" class="form-control my-2 p-2 input" id= "state-input" placeholder="State">
+                <input type="text" class="form-control my-2 p-2 input" id= "zipCode-input" placeholder="Zip Code">
+              </div>
+            <button type="button" id="add-address" class="btn btn-block p-2 font-weight-bold text-uppercase submit-button" value= "Submit">Find My Location!</button>
+            </form>
+        </div>
+      <div class="col-lg-7" id= "map"></div>
+    </div>
+      </div>
+    </section>
+  
+  <!-- End of polling location -->
 
-	<div class="os-animation" data-animation="bounceInRight" data-delay=".8s">
-		<h3>Where Your Vote Counts</h3>
-	</div>
 
-	<div class="os-animation" data-animation="bounceInLeft" data-delay="1s">
-		<a class="btn btn-outline-light btn-lg" href="#features">Get Started</a>
-	</div>
+  <!-- Team -->
+  <section class="p-5 team" id="team">
+      <div class="container-fluid">
+        <!-- title -->
+        <div class="row text-white text-center">
+          <div class="col m-4">
+            <h1 class="display-4 mb-4">Team</h1>
+            <div class="underline mb-4"></div>
+            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium inventore, sint quisquam fugiat pariatur culpa officia. Eveniet omnis quia tempora.</p>
+          </div>
+        </div>
+        <!-- end of title -->
+        <div class="row">
+          <div class="col-md-6 mx-auto">
+            <div class="carousel slide" data-ride="carousel" id="team-carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#team-carousel" data-slide-to="0" class=""></li>
+                <li data-target="#team-carousel" data-slide-to="1" class="active"></li>
+                <li data-target="#team-carousel" data-slide-to="2" class=""></li>
+                <li data-target="#team-carousel" data-slide-to="3" class=""></li>
+                <li data-target="#team-carousel" data-slide-to="4" class=""></li>
+              </ol>
+              <div class="carousel-inner">
+                <!-- Because of class (Active) all the slide are not visible -->
+                <div class="carousel-item text-center">
+                  <img src="images/customer1.jpeg" class="img-fluid rounded-circle m-5" width="150">
+                  <blockquote class="blockquote text-white">
+                    <p class="mb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum earum fuga natus veritatis minima voluptatibus? Quae consequuntur beatae repudiandae aut!</p>
+                  </blockquote>
+                  <h5 class="text-light text-uppercase font-weight-bold mb-3">Dominique</h5>
+                  <ul class="list-inline mb-5">
+                    <li class="list-inline-item">
+                      <svg class="svg-inline--fa fa-star fa-w-18 text-warning" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <i class="fas fa-star text-warning"></i> -->
+                    </li>
+                    <li class="list-inline-item">
+                      <svg class="svg-inline--fa fa-star fa-w-18 text-warning" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <i class="fas fa-star text-warning"></i> -->
+                    </li>
+                    <li class="list-inline-item">
+                      <svg class="svg-inline--fa fa-star fa-w-18 text-warning" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <i class="fas fa-star text-warning"></i> -->
+                    </li>
+                    <li class="list-inline-item">
+                      <svg class="svg-inline--fa fa-star fa-w-18 text-warning" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <i class="fas fa-star text-warning"></i> -->
+                    </li>
+                    <li class="list-inline-item">
+                      <svg class="svg-inline--fa fa-star fa-w-18 text-warning" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <i class="fas fa-star text-warning"></i> -->
+                    </li>
+                  </ul>
+                </div>
+                <div class="carousel-item text-center active">
+                  <img src="images/customer2.jpeg" class="img-fluid rounded-circle m-5" width="150">
+                  <blockquote class="blockquote text-white">
+                    <p class="mb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum earum fuga natus veritatis minima voluptatibus? Quae consequuntur beatae repudiandae aut!</p>
+                  </blockquote>
+                  <h5 class="text-light text-uppercase font-weight-bold mb-3">J</h5>
+                  <ul class="list-inline mb-5">
+                    <li class="list-inline-item">
+                      <svg class="svg-inline--fa fa-star fa-w-18 text-warning" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <i class="fas fa-star text-warning"></i> -->
+                    </li>
+                    <li class="list-inline-item">
+                      <svg class="svg-inline--fa fa-star fa-w-18 text-warning" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <i class="fas fa-star text-warning"></i> -->
+                    </li>
+                    <li class="list-inline-item">
+                      <svg class="svg-inline--fa fa-star fa-w-18 text-warning" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <i class="fas fa-star text-warning"></i> -->
+                    </li>
+                    <li class="list-inline-item">
+                      <svg class="svg-inline--fa fa-star fa-w-18 text-warning" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <i class="fas fa-star text-warning"></i> -->
+                    </li>
+                    <li class="list-inline-item">
+                      <svg class="svg-inline--fa fa-star fa-w-18 text-warning" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <i class="fas fa-star text-warning"></i> -->
+                    </li>
+                  </ul>
+                </div>
+                <div class="carousel-item text-center">
+                  <img src="images/customer5.jpeg" class="img-fluid rounded-circle m-5" width="150">
+                  <blockquote class="blockquote text-white">
+                    <p class="mb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum earum fuga natus veritatis minima voluptatibus? Quae consequuntur beatae repudiandae aut!</p>
+                  </blockquote>
+                  <h5 class="text-light text-uppercase font-weight-bold mb-3">Gurinder</h5>
+                  <ul class="list-inline mb-5">
+                    <li class="list-inline-item">
+                      <svg class="svg-inline--fa fa-star fa-w-18 text-warning" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <i class="fas fa-star text-warning"></i> -->
+                    </li>
+                    <li class="list-inline-item">
+                      <svg class="svg-inline--fa fa-star fa-w-18 text-warning" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <i class="fas fa-star text-warning"></i> -->
+                    </li>
+                    <li class="list-inline-item">
+                      <svg class="svg-inline--fa fa-star fa-w-18 text-warning" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <i class="fas fa-star text-warning"></i> -->
+                    </li>
+                    <li class="list-inline-item">
+                      <svg class="svg-inline--fa fa-star fa-w-18 text-warning" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <i class="fas fa-star text-warning"></i> -->
+                    </li>
+                    <li class="list-inline-item">
+                      <svg class="svg-inline--fa fa-star fa-w-18 text-warning" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <i class="fas fa-star text-warning"></i> -->
+                    </li>
+                  </ul>
+                </div>
+                <div class="carousel-item text-center">
+                  <img src="images/customer4.jpeg" class="img-fluid rounded-circle m-5" width="150">
+                  <blockquote class="blockquote text-white">
+                    <p class="mb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum earum fuga natus veritatis minima voluptatibus? Quae consequuntur beatae repudiandae aut!</p>
+                  </blockquote>
+                  <h5 class="text-light text-uppercase font-weight-bold mb-3">Desmond</h5>
+                  <ul class="list-inline mb-5">
+                    <li class="list-inline-item">
+                      <svg class="svg-inline--fa fa-star fa-w-18 text-warning" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <i class="fas fa-star text-warning"></i> -->
+                    </li>
+                    <li class="list-inline-item">
+                      <svg class="svg-inline--fa fa-star fa-w-18 text-warning" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <i class="fas fa-star text-warning"></i> -->
+                    </li>
+                    <li class="list-inline-item">
+                      <svg class="svg-inline--fa fa-star fa-w-18 text-warning" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <i class="fas fa-star text-warning"></i> -->
+                    </li>
+                    <li class="list-inline-item">
+                      <svg class="svg-inline--fa fa-star fa-w-18 text-warning" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <i class="fas fa-star text-warning"></i> -->
+                    </li>
+                    <li class="list-inline-item">
+                      <svg class="svg-inline--fa fa-star fa-w-18 text-warning" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <i class="fas fa-star text-warning"></i> -->
+                    </li>
+                  </ul>
+                </div>
+                <div class="carousel-item text-center">
+                  <img src="images/customer3.jpeg" class="img-fluid rounded-circle m-5" width="150">
+                  <blockquote class="blockquote text-white">
+                    <p class="mb-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum earum fuga natus veritatis minima voluptatibus? Quae consequuntur beatae repudiandae aut!</p>
+                  </blockquote>
+                  <h5 class="text-light text-uppercase font-weight-bold mb-3">Abir</h5>
+                  <ul class="list-inline mb-5">
+                    <li class="list-inline-item">
+                      <svg class="svg-inline--fa fa-star fa-w-18 text-warning" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <i class="fas fa-star text-warning"></i> -->
+                    </li>
+                    <li class="list-inline-item">
+                      <svg class="svg-inline--fa fa-star fa-w-18 text-warning" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <i class="fas fa-star text-warning"></i> -->
+                    </li>
+                    <li class="list-inline-item">
+                      <svg class="svg-inline--fa fa-star fa-w-18 text-warning" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <i class="fas fa-star text-warning"></i> -->
+                    </li>
+                    <li class="list-inline-item">
+                      <svg class="svg-inline--fa fa-star fa-w-18 text-warning" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <i class="fas fa-star text-warning"></i> -->
+                    </li>
+                    <li class="list-inline-item">
+                      <svg class="svg-inline--fa fa-star fa-w-18 text-warning" aria-hidden="true" data-prefix="fas" data-icon="star" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg><!-- <i class="fas fa-star text-warning"></i> -->
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of Team -->
+  
 
-</div>
-<!--- End Landing Page Caption -->
+  <!-- footer -->
+  <footer class="bg-dark px-5">
+    <div class="container-fluid">
+      <div class="row text-light py-4">
+        <div class="col-lg-4 col-sm-6">
+          <h5 class="pb-3">About Us</h5>
+          <p class="small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nobis dicta molestiae id laboriosam natus repudiandae, ducimus illum veritatis perspiciatis possimus, at facere debitis accusantium?</p>
+        </div>
+        <div class="col-lg-2 col-sm-6">
+          <h5 class="pb-3">Visit Us</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#Top" class="footer-link">Home</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link">Mission</a>
+            </li>
+            <li>
+              <a href="#running" class="footer-link">Candidates</a>
+            </li>
+            <li>
+              <a href="#past" class="footer-link">Registration</a>
+            </li>
+            <li>
+              <a href="#locator" class="footer-link">Booth Locator</a>
+            </li>
+            <li>
+              <a href="#team" class="footer-link">Team</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-sm-6">
+          <h5 class="pb-3">Need Help?</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="footer-link text-uppercase">Customer Service</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link text-uppercase">Online Chat</a>
+            </li>
+            <li>
+              <a href="#" class="footer-link text-uppercase">Support</a>
+            </li>
+            <li>
+              <a href="#" class="text-info">ProjectX@email.com</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-sm-6">
+          <h5 class="pb-3">Stay Connected</h5>
+          <p class="small">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque accusamus dolores iste praesentium assumenda est quia accusantium corrupti ipsam inventore.</p>
+          <form class="mb-3">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Email Address">
+              <div class="input-group-append">
+                <button type="button" class="btn bg-danger text-white text-uppercase font-weight-bold">Sign Up</button>
+              </div>
+            </div>
+          </form>
+          <ul class="list-inline">
+            <li class="list-inline-item"><svg class="svg-inline--fa fa-facebook-square fa-w-14 fa-2x text-primary" aria-hidden="true" data-prefix="fab" data-icon="facebook-square" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M448 80v352c0 26.5-21.5 48-48 48h-85.3V302.8h60.6l8.7-67.6h-69.3V192c0-19.6 5.4-32.9 33.5-32.9H384V98.7c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9H184v67.6h60.9V480H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48z"></path></svg><!-- <i class="fab fa-facebook-square fa-2x text-primary"></i> --></li>
+            <li class="list-inline-item"><svg class="svg-inline--fa fa-google-plus fa-w-16 fa-2x text-danger" aria-hidden="true" data-prefix="fab" data-icon="google-plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M248 8C111.1 8 0 119.1 0 256s111.1 248 248 248 248-111.1 248-248S384.9 8 248 8zm-70.7 372c-68.8 0-124-55.5-124-124s55.2-124 124-124c31.3 0 60.1 11 83 32.3l-33.6 32.6c-13.2-12.9-31.3-19.1-49.4-19.1-42.9 0-77.2 35.5-77.2 78.1s34.2 78.1 77.2 78.1c32.6 0 64.9-19.1 70.1-53.3h-70.1v-42.6h116.9c1.3 6.8 1.9 13.6 1.9 20.7 0 70.8-47.5 121.2-118.8 121.2zm230.2-106.2v35.5H372v-35.5h-35.5v-35.5H372v-35.5h35.5v35.5h35.2v35.5h-35.2z"></path></svg><!-- <i class="fab fa-google-plus fa-2x text-danger"></i> --></li>
+            <li class="list-inline-item"><svg class="svg-inline--fa fa-instagram fa-w-14 fa-2x text-danger" aria-hidden="true" data-prefix="fab" data-icon="instagram" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg><!-- <i class="fab fa-instagram fa-2x text-danger"></i> --></li>
+            <li class="list-inline-item"><svg class="svg-inline--fa fa-twitter fa-w-16 fa-2x text-info" aria-hidden="true" data-prefix="fab" data-icon="twitter" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg><!-- <i class="fab fa-twitter fa-2x text-info"></i> --></li>
+            <li class="list-inline-item"><svg class="svg-inline--fa fa-youtube fa-w-18 fa-2x text-danger" aria-hidden="true" data-prefix="fab" data-icon="youtube" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg><!-- <i class="fab fa-youtube fa-2x text-danger"></i> --></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col text-center text-light border-top pt-3">
+          <p>© 2019 Copyright, All Rights Reserved to Project <span>X</span></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- end of footer -->
+  <script
+  async
+  defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBNF6uPsCtt2kAj3M9Pt7jskCOhMT_KZ0U&callback=window.initMap"
+  ></script>
+  
+  <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					head.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					head.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+  // ]]>
+  
+</script>
 
-	<!--- Bouncing Down Arrow -->
-	<a class="down-arrow" href="#features">
-		<div class="arrow bounce d-none d-md-block">
-			<i class="fas fa-angle-down" aria-hidden="true"></i>
-		</div>
-	</a>
 
-</div>
-<!--- End Home Section -->
 
-<!--- Start Features Section -->
-<div id="features" class="offset">
 
-<!--- Start Animation -->
-<div class="os-animation" data-animation="fadeInLeft">
-<div class="narrow text-center">
-	<div class="col-12">
-		<h1>Why Vote?</h1>
-		<p class="lead">Nobody can force a citizen to vote. But many citizens do vote, because voting lets them tell the government what they want it to do. If citizens think they’re paying too many taxes, they can vote for a person who promises to lower taxes. If citizens want more services, they can vote for someone who will promise to spend funds to gain more services.</p>
-		<h3>Every Vote Counts!</h3>
-		<a class="btn btn-secondary btn-sm" href="#contact">Contact Us</a>
-		<a class="btn btn-turquoise btn-sm" href="#portfolio">Portfolio</a>
-	</div>
-</div>
-</div>
-<!--- End Animation -->
 
-<!--- Start Jumbotron -->
-<div class="jumbotron">
-<div class="narrow">
 
-	<div class="os-animation" data-animation="fadeInUp">
-		<h3 class="heading">Features</h3>
-		<div class="heading-underline"></div>
-	</div>
 
-<div class="row">
 
-	<div class="col-sm-6 col-md-4">
-		<div class="os-animation" data-animation="fadeInLeft">
-			<div class="feature">
-				<span class="fa-layers fa-4x">
-					<i class="fa fa-circle"></i>
-					<i class="fas fa-mobile-alt fa-inverse" data-fa-transform="shrink-6 right-.25"></i>
-				</span>
-				<h3>Mobile Friendly</h3>
-				<p>ProjectX features a mobie friendly, responsive first website layout using Bootstrap.</p>
-			</div>
-		</div>
-	</div>
 
-	<div class="col-sm-6 col-md-4">
-		<div class="os-animation" data-animation="fadeInUp">
-			<div class="feature">
-				<span class="fa-layers fa-4x">
-					<i class="fa fa-circle"></i>
-					<i class="fas fa-desktop fa-inverse" data-fa-transform="shrink-8 left-1"></i>
-				</span>
-				<h3>Full Screen Landing</h3>
-				<p>Using Bootstrap, the ProjectX theme features a full screen carousel landing page.</p>
-			</div>
-		</div>
-	</div>
 
-	<div class="col-sm-6 col-md-4">
-		<div class="os-animation" data-animation="fadeInRight">
-			<div class="feature">
-				<span class="fa-layers fa-4x">
-					<i class="fa fa-circle"></i>
-					<i class="fas fa-play fa-inverse" data-fa-transform="shrink-.5 right-1.3"></i>
-				</span>
-				<h3>Custom Animation</h3>
-				<p>Animate.css and Waypoints.js allow for smooth animations scrolling down the site.</p>
-			</div>
-		</div>
-	</div>
 
-	<div class="col-sm-6 col-md-4">
-		<div class="os-animation" data-animation="fadeInLeft">
-			<div class="feature">
-				<span class="fa-layers fa-4x">
-					<i class="fa fa-circle"></i>
-					<i class="fas fa-angle-double-down fa-inverse" data-fa-transform="shrink-5.5 down-.3"></i>
-				</span>
-				<h3>Parallax Scrolling</h3>
-				<p>Fixed background images allow the theme to have content-filled parallax scrolling sections.</p>
-			</div>
-		</div>
-	</div>
 
-	<div class="col-sm-6 col-md-4">
-		<div class="os-animation" data-animation="fadeInUp">
-			<div class="feature">
-				<span class="fa-layers fa-4x">
-					<i class="fa fa-circle"></i>
-					<i class="fas fa-sliders-h fa-inverse" data-fa-transform="shrink-8.5 right-.2"></i>
-				</span>
-				<h3>Content Slider</h3>
-				<p>Owl.Carousel.js makes navigating content sliders seamless with it's content carousel navigation.</p>
-			</div>
-		</div>
-	</div>
 
-	<div class="col-sm-6 col-md-4">
-		<div class="os-animation" data-animation="fadeInRight">
-			<div class="feature">
-				<span class="fa-layers fa-4x">
-					<i class="fa fa-circle"></i>
-					<i class="fab fa-wpforms fa-inverse" data-fa-transform="grow-6 right-.5"></i>
-				</span>
-				<h3>Contact Form</h3>
-				<p>The Bootsrap HTML form will send directly to your email address using PHPMailer.php.</p>
-			</div>
-		</div>
-	</div>
 
-</div> <!--- End Row -->
 
-</div> <!--- End Narrow -->
-</div>
-<!--- End Jumbotron -->
 
-</div>
-<!--- End Features Section -->
 
-<!--- Start Portfolio Section -->
-<div id="portfolio" class="offset">
 
-</div>
-<!--- End Portfolio Section -->
 
-<!--- Start Pricing Section -->
-<div id="pricing" class="offset">
 
-</div>
-<!--- End Pricing Section -->
 
-<!--- Start Team Section -->
-<div id="team" class="offset">
 
-</div>
-<!--- End Team Section -->
 
-<!--- Start Skills Section -->
-<div id="skills" class="offset">
 
-</div>
-<!--- End Skills Section -->
 
-<!--- Start Clients Section -->
-<div id="clients" class="offset">
 
-</div>
-<!--- End Clients Section -->
 
-<!--- Start Contact Section -->
-<div id="contact" class="offset">
 
-</div>
-<!--- End Contact Section -->
 
-<br><br><br><br><br><br><br><br><br><br>
 
-<!--- Script Source Files -->
-<script src="js/jquery-3.3.1.min.js"></script>
-<script src="https://use.fontawesome.com/releases/v5.4.2/js/all.js"></script>
-<script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
-<script src="js/contact.js"></script>
-<script src="js/custom.js"></script>
-<script src="js/jquery.counterup.js"></script>
-<script src="js/jquery.waypoints.min.js"></script>
-<script src="js/lightbox.js"></script>
-<script src="js/owl.carousel.js"></script>
-<script src="js/validator.js"></script>
-<script src="js/waypoints.js"></script>
-<!--- End of Script Source Files -->
 
-</body>
-</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
