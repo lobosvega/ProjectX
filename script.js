@@ -47,131 +47,156 @@ $(document).ready(function() {
       $(".card-3").removeClass("moveFromRight");
     }
   });
-});
 
-var map;
-var formHouseNumber;
-var formStreet;
-var formCity;
-var formState;
-var formZipCode;
+  var map;
+  var formHouseNumber;
+  var formStreet;
+  var formCity;
+  var formState;
+  var formZipCode;
+  var pollingAddress;
+  var pollingState;
+  var pollingZip;
 
-function initMap() {
-  console.log("INITIALIZING MAP");
-  map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 15,
-    center: { lat: 38.897957, lng: -77.03656 }
-  });
-}
-initMap();
+  function initMap() {
+    console.log("INITIALIZING MAP");
+    map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 15,
+      center: { lat: 38.897957, lng: -77.03656 }
+    });
+  }
+  initMap();
 
-$("#add-address").on("click", function(event) {
-  event.preventDefault();
-  formHouseNumber = $("#house-input")
-    .val()
-    .trim();
-  formStreet = $("#street-input")
-    .val()
-    .trim();
-  formCity = $("#city-input")
-    .val()
-    .trim();
-  formState = $("#state-input")
-    .val()
-    .trim();
-  formZipCode = $("#zipCode-input")
-    .val()
-    .trim();
+  $("#add-address").on("click", function(event) {
+    event.preventDefault();
+    if (
+      $.trim($("#house-input").val()) === "" ||
+      $.trim($("#street-input").val()) === "" ||
+      $.trim($("#city-input").val()) === "" ||
+      $.trim($("#state-input").val()) === "" ||
+      $.trim($("#zipCode-input").val()) === ""
+    ) {
+      $("#add-address").addClass("error");
+      return false;
+    }
 
-  console.log(formHouseNumber, formStreet, formCity, formState, formZipCode);
-});
+    formHouseNumber = $("#house-input")
+      .val()
+      .trim();
+    formStreet = $("#street-input")
+      .val()
+      .trim();
+    formCity = $("#city-input")
+      .val()
+      .trim();
+    formState = $("#state-input")
+      .val()
+      .trim();
+    formZipCode = $("#zipCode-input")
+      .val()
+      .trim();
 
-$("#add-address").on("click", function() {
-  var voteKey = "AIzaSyDrlrkFmFQIGo2oZGZ7FrwsYwiRZ2UFlf8";
-  var voterURL =
-    " https://www.googleapis.com/civicinfo/v2/voterinfo?key=" +
-    voteKey +
-    "&address=" +
-    formHouseNumber +
-    "%20" +
-    formStreet +
-    "%20" +
-    formCity +
-    "%20" +
-    formState +
-    "%20" +
-    formZipCode +
-    "%20" +
-    "&electionId=2000";
+    console.log(formHouseNumber, formStreet, formCity, formState, formZipCode);
 
-  $.ajax({
-    url: voterURL,
-    method: "GET"
-  }).then(function(response) {
-    console.log(response);
-    var pollingAddress = response.pollingLocations[0].address.line1;
-    console.log(pollingAddress);
-    var pollingState = response.pollingLocations[0].address.state;
-    console.log(pollingState);
-    var pollingZip = response.pollingLocations[0].address.zip;
-    console.log(pollingZip);
-    var mapsKey = "AIzaSyBNF6uPsCtt2kAj3M9Pt7jskCOhMT_KZ0U";
-    var latLotURL =
-      "https://maps.googleapis.com/maps/api/geocode/json?address=" +
-      "+" +
-      pollingAddress +
-      "+" +
-      pollingState +
-      "+" +
-      pollingZip +
-      "&key=" +
-      mapsKey;
+    var voteKey = "AIzaSyDrlrkFmFQIGo2oZGZ7FrwsYwiRZ2UFlf8";
+    var voterURL =
+      " https://www.googleapis.com/civicinfo/v2/voterinfo?key=" +
+      voteKey +
+      "&address=" +
+      formHouseNumber +
+      "%20" +
+      formStreet +
+      "%20" +
+      formCity +
+      "%20" +
+      formState +
+      "%20" +
+      formZipCode +
+      "%20" +
+      "&electionId=2000";
 
     $.ajax({
-      url: latLotURL,
+      url: voterURL,
       method: "GET"
     }).then(function(response) {
       console.log(response);
-      pollingLat = response.results[0].geometry.location.lat;
-      pollingLng = response.results[0].geometry.location.lng;
-      console.log(pollingLat, pollingLng);
-
-      var directionsKey = "AIzaSyDs_PbNWm5zI9ruuOaUrl3CLZ_p6ZkWD3I";
-      const proxyurl = "https://cors-anywhere.herokuapp.com/";
-      const url =
-        "https://maps.googleapis.com/maps/api/directions/json?origin=" +
-        formHouseNumber +
+      var pollingAddress = response.pollingLocations[0].address.line1;
+      console.log(pollingAddress);
+      var pollingState = response.pollingLocations[0].address.state;
+      console.log(pollingState);
+      var pollingZip = response.pollingLocations[0].address.zip;
+      console.log(pollingZip);
+      var mapsKey = "AIzaSyBNF6uPsCtt2kAj3M9Pt7jskCOhMT_KZ0U";
+      var latLotURL =
+        "https://maps.googleapis.com/maps/api/geocode/json?address=" +
         "+" +
-        formStreet +
-        "+" +
-        formCity +
-        "+" +
-        formState +
-        "+" +
-        formZipCode +
-        "&destination=" +
         pollingAddress +
         "+" +
         pollingState +
         "+" +
         pollingZip +
         "&key=" +
-        directionsKey;
-      fetch(proxyurl + url)
-        .then(response => response.json())
-        .then(contents => console.log(contents))
-        .catch(() =>
-          console.log("Can’t access " + url + " response. Blocked by browser?")
-        );
+        mapsKey;
 
-      var boothLocation = { lat: pollingLat, lng: pollingLng };
+      $.ajax({
+        url: latLotURL,
+        method: "GET"
+      }).then(function(response) {
+        console.log(response);
+        pollingLat = response.results[0].geometry.location.lat;
+        pollingLng = response.results[0].geometry.location.lng;
+        console.log(pollingLat, pollingLng);
 
-      var marker = new google.maps.Marker({
-        position: boothLocation,
-        map: map
+        var directionsKey = "AIzaSyDs_PbNWm5zI9ruuOaUrl3CLZ_p6ZkWD3I";
+        const proxyurl = "https://cors-anywhere.herokuapp.com/";
+        const url =
+          "https://maps.googleapis.com/maps/api/directions/json?origin=" +
+          formHouseNumber +
+          "+" +
+          formStreet +
+          "+" +
+          formCity +
+          "+" +
+          formState +
+          "+" +
+          formZipCode +
+          "&destination=" +
+          pollingAddress +
+          "+" +
+          pollingState +
+          "+" +
+          pollingZip +
+          "&key=" +
+          directionsKey;
+
+        var boothLocation = { lat: pollingLat, lng: pollingLng };
+
+        var contentString =
+          '<div id="content">' +
+          '<div id="siteNotice">' +
+          "</div>" +
+          '<h1 id="firstHeading" class="firstHeading">' +
+          pollingAddress +
+          pollingState +
+          pollingZip +
+          "</h1>" +
+          "</div>";
+
+        var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+          position: boothLocation,
+          map: map
+        });
+
+        marker.addListener("click", function() {
+          infowindow.open(map, marker);
+        });
+
+        map.setCenter(marker.getPosition());
       });
-
-      map.setCenter(marker.getPosition());
     });
   });
 });
