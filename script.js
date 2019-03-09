@@ -238,7 +238,7 @@ $(document).ready(function() {
     $("#cards").empty();
     var y = $(this).attr("data-name");
     var queryURL =
-      "http://api.nytimes.com/svc/search/v2/articlesearch.json?q=" +
+      "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" +
       y +
       "&api-key=O9O42AUS15WtWuJXO33I79AgyT0nDPFq";
     $.ajax({
