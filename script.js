@@ -49,6 +49,11 @@ $(document).ready(function() {
   });
 });
 
+var card = document.querySelector('.card');
+card.addEventListener( 'click', function() {
+  card.classList.toggle('is-flipped');
+});
+
 var map;
 var formHouseNumber;
 var formStreet;
