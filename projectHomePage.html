@@ -54,37 +54,36 @@
 
     <!-- Starting of the Banner -->
     <!-- using (text-center) to help place the text into the center on a small screen -->
+    <video autoplay muted loop id="myVideo">
+        <source src="../ProjectX/Assets/images/160820_258_NYC_USAFlag12_1080p.mp4" type="video/mp4">
+    </video>
     <div class="text-light text-md-right text-center banner" id="home">
       <h1 class="display-4 banner-heading">Welcome to <span class="text-uppercase">Vote</span><span class="display-3">X</span></h1>
       <p class="lead banner-paragraph">"The ballot is stronger than the bullet."</p>
-
     <!-- Begin 270towin.com 2020 Presidential Election Countdown Widget -->
     <div class="clock">
-<iframe src="http://www.270towin.com/2020-countdown-clock/widget300x200.php" width="300" height="200" border="0" frameborder="0">
-  Browser not supported. Visit <a href="http://www.270towin.com/">www.270towin.com</a>
-</iframe>
-</div>
+      <iframe src="http://www.270towin.com/2020-countdown-clock/widget300x200.php" width="300" height="200" border="0" frameborder="0"> Browser not supported. Visit <a href="http://www.270towin.com/">www.270towin.com</a>
+      </iframe>
+    </div>
 <!-- End 270towin.com 2020 Presidential Election Countdown widget --> 
     </div>
     <!-- Ending of the  banner -->
-  </header>
+</header>
   <!-- Ending of the  header -->
 
 
   <!-- Starting of mission -->
   <section class="p-5 mission" id="mission">
-    <div class="container-fluid">
-      <!-- title -->
-      <div class="row text-white text-center">
-        <div class="col m-4">
-          <h1 class="display-4 mb-4">Our Mission</h1>
-          <div class="underline mb-4"></div>
-          <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium inventore, sint quisquam fugiat pariatur culpa officia. Eveniet omnis quia tempora.</p>
-        </div>
-      </div>
-      <!-- end of title -->
+      <div class="container-fluid">
       <!-- my-5 for space on top & bottom  -->
       <div class="row my-5">
+          <div class="row text-white text-center">
+              <div class="col m-5">
+                <h1 class="display-4 mb-4">Our Mission</h1>
+                <div class="underline mb-4"></div>
+                <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium inventore, sint quisquam fugiat pariatur culpa officia. Eveniet omnis quia tempora.</p>
+                </div>
+              </div>
         <!-- each column only take up one third of the entire row (md-4) -->
         <div class="col-md-4 text-center">
           <!-- 5x changes size of fontawesome icon -->
@@ -223,9 +222,9 @@
                       <img src="../ProjectX/Assets/images/bernie.jpg" alt="G.O.A.T" style="width:350px;height:375px;" class="card-img"> 
                   </div>    
                   <div class=""card__face card__face--back>
-                      <h1>Bernie Sanders(D)</h1> 
+                     <!-- <h1>Bernie Sanders(D)</h1> 
                       <p>Senator from Vermont; former congressman</p> 
-                      <p>https://berniesanders.com/</p>
+                      <p>https://berniesanders.com/</p> -->
                   </div>
                 </div>
             </div>
@@ -511,10 +510,10 @@
           <h5 class="pb-3">Visit Us</h5>
           <ul class="list-unstyled">
             <li>
-              <a href="#Top" class="footer-link">Home</a>
+              <a href="#home" class="footer-link">Home</a>
             </li>
             <li>
-              <a href="#" class="footer-link">Mission</a>
+              <a href="#mission" class="footer-link">Mission</a>
             </li>
             <li>
               <a href="#running" class="footer-link">Candidates</a>
@@ -623,51 +622,5 @@
   // ]]>
   
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body></html>
+</body>
+</html>
